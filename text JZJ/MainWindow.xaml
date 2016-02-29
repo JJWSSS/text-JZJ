@@ -1,0 +1,36 @@
+﻿<Window x:Name="mainwindow" x:Class="text_JZJ.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Height="500" Width="750" >
+    <Grid>
+        <DockPanel >
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="文件">
+                    <MenuItem x:Name="newMI" Header="新建" Click="newMI_Click"></MenuItem>
+                    <MenuItem x:Name="saveMI" Header="保存" Click="saveMI_Click"></MenuItem>
+                    <MenuItem x:Name="open" Header="打开" Click="open_Click"></MenuItem>
+                    <MenuItem x:Name="lcwMI" Header="另存为" Click="lcwMI_Click"></MenuItem>
+                    <MenuItem x:Name="exit" Header="退出" Click="exit_Click"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="编辑" >
+                    <MenuItem x:Name="find" Header="查找替换" Click="find_Click"></MenuItem>
+                    <MenuItem x:Name="lines" Header="行数" Click="lines_Click"></MenuItem>
+                    <MenuItem x:Name="selectAll" Header="全选" Click="selectAll_Click"></MenuItem>
+                    <MenuItem x:Name="undo" Header="撤销" Click="undo_Click"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="格式">
+                    <MenuItem x:Name="cfont" Header="字体" Click="cfont_Click"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="帮助">
+                    <!--MenuItem Header="查看帮助"></-->
+                    <MenuItem x:Name="guanyu" Header="关于text JZJ" Click="guanyu_Click"></MenuItem>
+                </MenuItem>
+            </Menu>
+            <StatusBar x:Name="ststusb" DockPanel.Dock="Bottom">
+                <StatusBarItem>
+                    <TextBlock x:Name="textstatus" HorizontalAlignment="Left"></TextBlock>
+                </StatusBarItem>
+            </StatusBar>
+            <TextBox HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" Name="txtRTB" AcceptsReturn="True" AcceptsTab="True" DockPanel.Dock="Bottom" TextChanged="txtRTB_TextChanged" ></TextBox>
+        </DockPanel>
+    </Grid>
+</Window>
